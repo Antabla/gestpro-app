@@ -23,7 +23,9 @@
         <tr>
           <td>{{task.id?.substr(0,5)}}</td>
           <td>{{task.description}}</td>
-          <td [innerHTML]="getStatusDescription(task.status)"></td>
+          <td>
+            <span [innerHTML]="getStatusDescription(task.status)"></span>
+          </td>
           <td>
             <button class="btn btn-sm btn-danger me-1" (click)="deleteTask(task.id!)">Delete</button>
             <button class="btn btn-sm btn-secondary" (click)="editTask(task)">Edit</button>

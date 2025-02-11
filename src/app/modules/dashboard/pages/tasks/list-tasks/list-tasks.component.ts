@@ -75,11 +75,11 @@ export class ListTasksComponent implements OnInit {
   getStatusDescription(status: EStatusTask) {
     switch (status) {
       case EStatusTask.TODO:
-        return '<span class="badge badge-pill badge-light">To Do</span>';
+        return '<b class="text-dark">To Do</b>';
       case EStatusTask.DOING:
-        return '<span class="badge badge-pill badge-info">Doing</span>';
+        return '<b class="text-info">Doing</b>';
       case EStatusTask.DONE:
-        return '<span class="badge badge-pill badge-success">Done</span>';
+        return '<b class="text-success">Done</b>';
     }
   }
 }
