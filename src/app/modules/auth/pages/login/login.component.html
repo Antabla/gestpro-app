@@ -1,0 +1,22 @@
+<div class="container d-flex">
+
+
+  <form [formGroup]="form" class="card p-3 m-auto mt-5">
+    <h4 class="mb-2">Login</h4>
+    <div class="mb-2">
+      <label for="username"> Username</label>
+      <input id="username" class="form-control" type="text" formControlName="username">
+    </div>
+
+    <div class="mb-2">
+      <label for="password"> Password</label>
+      <input id="password" class="form-control" type="password" formControlName="password">
+    </div>
+
+    <button class="btn btn-primary" [disabled]="form.invalid" (click)="login()">Iniciar sesion</button>
+    @if(error){
+      <small class="text-danger text-center mt-2">Datos invalidos, porfavor verifique</small>
+    }
+  </form>
+
+</div>
