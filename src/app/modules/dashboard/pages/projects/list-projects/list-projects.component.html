@@ -1,4 +1,7 @@
+<app-navbar></app-navbar>
 <div class="container d-flex flex-column">
+
+  <h3 class="text-center mt-2">List of projects</h3>
 
   <button class="btn btn-primary ms-auto mt-2" (click)="addProject()">Add project</button>
 
@@ -21,7 +24,8 @@
           <td>{{project.description}}</td>
           <td>
             <button class="btn btn-sm btn-danger me-1" (click)="deleteProject(project.id!)">Delete</button>
-            <button class="btn btn-sm btn-secondary" (click)="editProject(project)">Edit</button>
+            <button class="btn btn-sm btn-secondary me-1" (click)="editProject(project)">Edit</button>
+            <button class="btn btn-sm btn-success" (click)="goToListTasks(project.id)">tasks</button>
           </td>
         </tr>
         }

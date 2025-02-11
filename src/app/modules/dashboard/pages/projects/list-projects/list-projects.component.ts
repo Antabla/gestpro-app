@@ -55,4 +55,8 @@ export class ListProjectsComponent implements OnInit {
   editProject(project: IProject) {
     this.router.navigateByUrl('/dashboard/projects/create', { state: project });
   }
+
+  goToListTasks(projectId: IProject['id']) {
+    this.router.navigateByUrl('/dashboard/tasks', { state: { projectId } });
+  }
 }

@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div class="container d-flex flex-column">
+
+  <button class="btn btn-primary mt-2 mb-4" (click)="goBack()">Go back</button>
+
+  <form [formGroup]="form" class="d-flex flex-column">
+    <div class="mb-2">
+      <label for="description">Description</label>
+      <input id="description" class="form-control" formControlName="description">
+    </div>
+
+    <div class="mb-2">
+      <label for="status">Status</label>
+      <select class="form-select" aria-label="Default select example" formControlName="status">
+        <option value="0">Todo</option>
+        <option value="1">Doing</option>
+        <option value="2">Done</option>
+      </select>
+    </div>
+
+    <button class="btn btn-primary m-auto" (click)="save()">Save</button>
+  </form>
+
+</div>
