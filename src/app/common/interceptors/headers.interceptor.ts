@@ -20,8 +20,6 @@ export class HeadersInterceptor implements HttpInterceptor {
       setHeaders: { Authorization: `Bearer ${token}`, 'x-requid': v4() },
     });
 
-    console.log('req', req);
-
     return next.handle(req);
   }
 }

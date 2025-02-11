@@ -1,0 +1,19 @@
+<div class="container d-flex flex-column">
+
+  <button class="btn btn-primary mt-2 mb-4" (click)="goBack()">Go back</button>
+
+  <form  [formGroup]="form" class="d-flex flex-column">
+    <div class="mb-2">
+      <label for="name">Name</label>
+      <input id="name" class="form-control" type="text" formControlName="name">
+    </div>
+
+    <div class="mb-2">
+      <label for="description">Description</label>
+      <input id="description" class="form-control" type="text" formControlName="description">
+    </div>
+
+    <button class="btn btn-primary m-auto" (click)="save()">Save</button>
+  </form>
+
+</div>

@@ -48,7 +48,6 @@ export class AuthService {
   }
 
   isAuthenticated() {
-    console.log(this.accessToken);
     if (!this.accessToken || this.accessToken === '') {
       return false;
     }
